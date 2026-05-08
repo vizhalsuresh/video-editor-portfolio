@@ -317,7 +317,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg0);}
 /* INTRO GATE */
 .intro-gate {
   position: fixed; inset: 0; background: #000; z-index: 9999;
-  display: none; flex-direction: column; align-items: center; justify-content: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
   color: #fff; text-align: center;
 }
 </style>
@@ -819,7 +819,7 @@ function PropertiesPanel({ activeComp, compositions, selectedProject }) {
         <div className="prop-section">
           <div className="prop-section-header">NARRATIVE / TRANSCRIPT</div>
           <div style={{padding:'10px', fontSize:'11px', color:'var(--t2)', lineHeight:'1.6', fontFamily:'var(--font-main)', fontStyle:'italic'}}>
-            "{selectedProject.description}"
+            "{selectedProject?.description}"
           </div>
         </div>
       )}
