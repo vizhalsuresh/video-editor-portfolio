@@ -658,9 +658,11 @@ function YTLightbox({ item, onClose }) {
 
 function Player({ project }) {
   const [ready, setReady] = useState(false);
+  const [ended, setEnded] = useState(false);
 
   useEffect(() => {
     setReady(false);
+    setEnded(false);
   }, [project?.id]);
 
   if (!project) return (
@@ -669,6 +671,7 @@ function Player({ project }) {
 
   const tech = project.technical || { resolution: '1080p', fps: '24', dur: '0:30' };
   const tools = project.tools || ["Premiere Pro", "After Effects", "AI"];
+  const showOverlay = !ready || ended;
 
   return (
     <div className="source-monitor fade-in" style={{flexDirection:'column', background:'var(--bg1)'}}>
@@ -679,11 +682,6 @@ function Player({ project }) {
 
       {project.mediaType === 'image' ? (
         <div style={{flex:1, width:'100%', position:'relative', minHeight:0, padding:'10px 20px'}}>
-          {!ready && (
-            <div style={{position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center'}}>
-              <div className="va-spinner" />
-            </div>
-          )}
           <img key={project.id} src={project.mediaUrl}
             onLoad={() => setReady(true)}
             style={{position:'absolute', inset:'10px 20px',
@@ -697,37 +695,30 @@ function Player({ project }) {
                      overflow:'hidden', position:'relative', display:'flex',
                      alignItems:'center', justifyContent:'center', flexShrink:0}}>
 
-          {!ready && (
-            <div style={{position:'absolute', inset: 0, zIndex: 10, display:'flex', flexDirection:'column', alignItems:'center', justifyContent: 'center', gap:'12px', background: 'var(--bg1)'}}>
-              <div className="va-spinner" />
-              <div style={{fontSize:'10px', color:'var(--acc)', fontFamily:'var(--font-mono)', letterSpacing:'3px', fontWeight:700}}>SYNCHRONIZING_SEQUENCE</div>
-            </div>
-          )}
-
           <video key={project.id} src={project.mediaUrl}
             controls autoPlay loop
             controlsList="nodownload"
             onLoadedData={() => setReady(true)}
+            onEnded={() => setEnded(true)}
+            onPlay={() => setEnded(false)}
             style={{width:'100%', height:'100%', objectFit:'contain', opacity: ready ? 1 : 0, transition: 'opacity 0.5s'}} />
             
-          {ready && (
-            <div className="player-info-overlay">
-              <div className="yt-tech-block">
-                <div className="yt-tech-item"><span>RES</span>{tech.resolution}</div>
-                <div className="yt-tech-item"><span>FPS</span>{tech.fps}</div>
-                <div className="yt-tech-item"><span>DUR</span>{tech.duration || tech.dur}</div>
-              </div>
-              <div className="yt-name">{project.name}</div>
-              <div className="yt-narrative-block">
-                <div className="yt-narrative-header">NARRATIVE / TRANSCRIPT</div>
-                <div className="yt-narrative-text">{project.description}</div>
-              </div>
-              <div className="yt-tools-block">
-                {tools.map(t => <span key={t} className="yt-tool-tag">{t}</span>)}
-              </div>
-              <div className="info-card-scanner"></div>
+          <div className={`player-info-overlay${showOverlay ? ' force-visible' : ''}`} style={showOverlay ? {opacity: 1, pointerEvents: 'auto'} : {}}>
+            <div className="yt-tech-block">
+              <div className="yt-tech-item"><span>RES</span>{tech.resolution}</div>
+              <div className="yt-tech-item"><span>FPS</span>{tech.fps}</div>
+              <div className="yt-tech-item"><span>DUR</span>{tech.duration || tech.dur}</div>
             </div>
-          )}
+            <div className="yt-name">{project.name}</div>
+            <div className="yt-narrative-block">
+              <div className="yt-narrative-header">{!ready ? 'LOADING SEQUENCE...' : (ended ? 'SEQUENCE COMPLETED' : 'NARRATIVE / TRANSCRIPT')}</div>
+              <div className="yt-narrative-text">{project.description}</div>
+            </div>
+            <div className="yt-tools-block">
+              {tools.map(t => <span key={t} className="yt-tool-tag">{t}</span>)}
+            </div>
+            <div className="info-card-scanner"></div>
+          </div>
         </div>
       )}
 
