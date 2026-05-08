@@ -85,8 +85,8 @@
       "files": [
         {
           "id": "ve1",
-          "name": "Portfolio Master Reel (v2)",
-          "mediaUrl": "assets/portfolio_walkthrough.mp4",
+          "name": "Portfolio Master Reel (Final)",
+          "mediaUrl": "assets/portfolio_walkthrough_final.mp4",
           "mediaType": "video",
           "description": "A coded cinematic workspace built through HyperFrames and Gemini-powered development \u2014 where editing, motion, and interaction merge into one visual system.",
           "technical": {
@@ -310,50 +310,6 @@
             "resolution": "1920x1080",
             "fps": "24.0",
             "duration": "0:59"
-          },
-          "description": "An atmospheric visual journey representing karmic release through cinematic textures, layered color, and meditative motion.",
-          "tags": [
-            "3D Animation",
-            "Technical",
-            "Cinematic"
-          ],
-          "tools": [
-            "AI Visual Design",
-            "Cinematic Compositing",
-            "Color Atmosphere"
-          ]
-        },
-        {
-          "id": "av3",
-          "name": "03 - Karmic Liberation",
-          "mediaUrl": "assets/Animation_Videos/03 - Karmic Liberation.mp4",
-          "mediaType": "video",
-          "technical": {
-            "resolution": "1920x1080",
-            "fps": "24.0",
-            "duration": "0:33"
-          },
-          "description": "An atmospheric visual journey representing karmic release through cinematic textures, layered color, and meditative motion.",
-          "tags": [
-            "3D Animation",
-            "Cinematic",
-            "Spiritual"
-          ],
-          "tools": [
-            "AI Visual Design",
-            "Cinematic Compositing",
-            "Color Atmosphere"
-          ]
-        },
-        {
-          "id": "av4",
-          "name": "04 - Transcendental Intelligence",
-          "mediaUrl": "assets/Animation_Videos/04 - Transcendental Intelligence.mp4",
-          "mediaType": "video",
-          "technical": {
-            "resolution": "1920x1080",
-            "fps": "24.0",
-            "duration": "1:02"
           },
           "description": "An atmospheric visual journey representing karmic release through cinematic textures, layered color, and meditative motion.",
           "tags": [
