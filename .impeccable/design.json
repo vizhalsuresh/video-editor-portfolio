@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-08T12:00:00Z",
+  "title": "Design System: Suresh Vizhal Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Command Center Cyan", "canonical": "oklch(65% 0.18 240)", "tonalRamp": ["#032635", "#064c6a", "#09729f", "#0ea5e9", "#49bcfa", "#87d2fc", "#c5e9fe", "#e2f4ff"] },
+      "secondary": { "role": "secondary", "displayName": "Neural Purple", "canonical": "oklch(60% 0.25 290)", "tonalRamp": ["#250f38", "#4b1e70", "#712ea7", "#a855f7", "#be82fa", "#d4affc", "#ebd7fe", "#f5ebff"] },
+      "tertiary": { "role": "tertiary", "displayName": "Logic Green", "canonical": "oklch(75% 0.25 150)", "tonalRamp": ["#0d2f19", "#1a5e32", "#268d4b", "#3ecf6e", "#6edf92", "#9df0b6", "#cdf8da", "#e6fcef"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "High-impact cinematic headlines." },
+      "mono": { "displayName": "System Data", "purpose": "Technical metadata and timecodes." }
+    },
+    "shadows": [
+      { "name": "glow-primary", "value": "0 0 20px rgba(14,165,233,0.3)", "purpose": "Interactive focus for Command Center elements." }
+    ],
+    "motion": [
+      { "name": "expo-out", "value": "cubic-bezier(0.19, 1, 0.22, 1)", "purpose": "Smooth professional reveals." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Standard action button for the command center.",
+      "html": "<button class=\"ds-btn-primary\">INITIALIZE_RENDER</button>",
+      "css": ".ds-btn-primary { background: #0ea5e9; color: #050505; border: none; border-radius: 2px; padding: 8px 20px; font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1); } .ds-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 0 15px rgba(14,165,233,0.4); background: #49bcfa; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card-project",
+      "description": "Premium project container with scanline effect.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-scanner\"></div><div class=\"ds-card-content\"><div class=\"ds-card-meta\">4K_MASTER_60FPS</div><div class=\"ds-card-title\">SYSTEM_REVEAL</div></div></div>",
+      "css": ".ds-card { background: #141414; border: 1px solid #2a2a2a; border-radius: 4px; padding: 16px; position: relative; overflow: hidden; width: 280px; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; } .ds-card-scanner { position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: #0ea5e9; box-shadow: 0 0 10px #0ea5e9; opacity: 0; transition: opacity 0.3s; } .ds-card:hover .ds-card-scanner { animation: scan 2s linear infinite; opacity: 0.6; } @keyframes scan { 0% { top: 0; } 100% { top: 100%; } } .ds-card-meta { font-family: 'JetBrains Mono', monospace; font-size: 8px; color: #0ea5e9; margin-bottom: 4px; } .ds-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: #f5f5f7; letter-spacing: 1px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Digital Command Center",
+    "overview": "A high-density technical workspace replicating the precision of professional NLE software. Built on deep blacks and functional signal colors.",
+    "keyCharacteristics": ["High Information Density", "Systematic Accents", "Monolithic Typography"],
+    "rules": [
+      { "name": "The Signal Rule", "body": "Accent colors must denote functional meaning or software alignment, never purely decorative.", "section": "colors" },
+      { "name": "The Lit-Edge Rule", "body": "Differentiate surfaces via 1px tinted borders acting as rim lights rather than shadows.", "section": "elevation" }
+    ],
+    "dos": ["Do use JetBrains Mono for system output", "Do utilize Bebas Neue for large-scale impact", "Do use tinted greys for backgrounds"],
+    "donts": ["Don't use standard rounded buttons or bubbly UI", "Don't create a normal website walkthrough feel"]
+  }
+}

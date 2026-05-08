@@ -35,6 +35,13 @@
       "group": "Portfolio"
     },
     {
+      "id": "programmatic",
+      "name": "Programmatic_Pipeline.comp",
+      "dur": "0:45",
+      "color": "#3ecfb8",
+      "group": "Portfolio"
+    },
+    {
       "id": "youtube",
       "name": "YouTube_Shorts.comp",
       "dur": "2:30",
@@ -80,6 +87,37 @@
     }
   ],
   "categories": [
+    {
+      "name": "Programmatic Video",
+      "files": [
+        {
+          "id": "pv1",
+          "name": "Automated Intro Video",
+          "mediaUrl": "assets/portfolio_case_study_v3.mp4",
+          "mediaType": "video",
+          "description": "A fully programmatic introduction to my body of work. Built using HTML/CSS and rendered via HyperFrames. Voiceover, background music, and script were generated using local AI models (Llama 3, MusicLM) and orchestrated into a seamless automated pipeline.",
+          "technical": {
+            "resolution": "4K Master",
+            "fps": "60",
+            "bitrate": "50Mbps",
+            "codec": "H.264",
+            "duration": "00:30"
+          },
+          "tools": [
+            "HyperFrames",
+            "Remotion",
+            "React",
+            "Local AI (Llama/MusicLM)",
+            "Automated VO"
+          ],
+          "tags": [
+            "Programmatic",
+            "AI-Driven",
+            "Code-to-Video"
+          ]
+        }
+      ]
+    },
     {
       "name": "Video Editor",
       "files": [

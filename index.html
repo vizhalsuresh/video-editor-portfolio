@@ -160,25 +160,25 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg0);}
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 18px;
+  padding: 30px;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 5;
 }
 .yt-card:hover .yt-info-overlay { opacity: 1; }
 
-.yt-tech-block { display: flex; gap: 12px; margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; }
-.yt-tech-item { font-family: var(--font-mono); font-size: 8px; color: var(--acc); }
-.yt-tech-item span { opacity: 0.5; margin-right: 4px; color: var(--t1); }
+.yt-tech-block { display: flex; gap: 16px; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 10px; }
+.yt-tech-item { font-family: var(--font-mono); font-size: 11px; color: var(--acc); letter-spacing: 1px; font-weight: 700; }
+.yt-tech-item span { opacity: 0.6; margin-right: 6px; color: var(--t1); font-weight: 400; }
 
-.yt-name { font-family: var(--font-hero); font-size: 18px; color: var(--t1); letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase; }
+.yt-name { font-family: var(--font-hero); font-size: 32px; color: var(--t1); letter-spacing: 2px; margin-bottom: 12px; text-transform: uppercase; line-height: 1; text-shadow: 0 0 20px rgba(0,0,0,0.5); }
 
-.yt-narrative-block { margin-bottom: 12px; }
-.yt-narrative-header { font-family: var(--font-mono); font-size: 8px; color: var(--acc); letter-spacing: 2px; margin-bottom: 4px; opacity: 0.8; }
-.yt-narrative-text { font-family: var(--font-main); font-size: 11px; line-height: 1.4; color: var(--t2); font-weight: 300; }
+.yt-narrative-block { margin-bottom: 16px; background: rgba(0,0,0,0.3); padding: 12px; border-left: 2px solid var(--acc); }
+.yt-narrative-header { font-family: var(--font-mono); font-size: 12px; color: var(--acc); letter-spacing: 3px; margin-bottom: 8px; opacity: 1; font-weight: 700; }
+.yt-narrative-text { font-family: var(--font-main); font-size: 14px; line-height: 1.6; color: var(--t1); font-weight: 300; letter-spacing: 0.5px; }
 
-.yt-tools-block { display: flex; flex-wrap: wrap; gap: 6px; }
-.yt-tool-tag { font-family: var(--font-mono); font-size: 8px; background: var(--bg4); color: var(--t2); padding: 2px 6px; border-radius: 2px; border: 1px solid var(--b2); }
+.yt-tools-block { display: flex; flex-wrap: wrap; gap: 8px; }
+.yt-tool-tag { font-family: var(--font-mono); font-size: 11px; background: rgba(14, 165, 233, 0.1); color: var(--acc); padding: 4px 10px; border-radius: 2px; border: 1px solid rgba(14, 165, 233, 0.3); font-weight: 600; text-transform: uppercase; }
 
 .info-card-scanner {
   position: absolute;
@@ -541,6 +541,12 @@ function App() {
               {activeComp === 'about' && <About profile={profile} />}
               {activeComp === 'work' && <Work workItems={workItems} />}
               {activeComp === 'player' && <Player project={selectedProject} />}
+              {activeComp === 'programmatic' && (
+                <ProgrammaticGrid 
+                  projects={categories.find(c => c.name === 'Programmatic Video')?.files || []} 
+                  onSelect={(p) => { setSelectedProject(p); setActiveComp('player'); }}
+                />
+              )}
               {activeComp === 'youtube' && <YouTubeGrid items={youtubeProjects} />}
               {activeComp === 'contact' && <Contact profile={profile} />}
             </div>
@@ -575,6 +581,8 @@ function About({ profile }) {
            <Skill name="Adobe Premiere Pro" pct={85} color="var(--purple)" />
            <Skill name="Adobe Photoshop" pct={85} color="var(--teal)" />
            <Skill name="AI Creative Tools" pct={80} color="var(--orange)" />
+           <Skill name="HyperFrames" pct={70} color="var(--acc)" />
+           <Skill name="Remotion" pct={70} color="var(--purple)" />
         </div>
       </div>
     </div>
@@ -642,6 +650,55 @@ function YouTubeGrid({ items }) {
         </div>
       </div>
       {expanded && <YTLightbox item={expanded} onClose={() => setExpanded(null)} />}
+    </div>
+  );
+}
+
+function ProgrammaticGrid({ projects, onSelect }) {
+  return (
+    <div className="yt-section fade-in" style={{padding:'40px'}}>
+      <div className="yt-column" style={{width:'100%'}}>
+        <div className="yt-col-header">
+          <div className="yt-col-dot" style={{background:'var(--acc)', color:'var(--acc)'}} />
+          <span className="yt-col-title">Programmatic Video Pipelines</span>
+          <span className="yt-col-count">{String(projects.length).padStart(2,'0')} SYSTEMS</span>
+        </div>
+        <div className="yt-landscape-list" style={{display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(400px, 1fr))', gap:'30px'}}>
+          {projects.map(p => (
+            <ProgrammaticCard key={p.id} project={p} onSelect={() => onSelect(p)} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProgrammaticCard({ project, onSelect }) {
+  const tech = project.technical || { resolution: '4K', fps: '60', dur: '0:30' };
+  const tools = project.tools || ["React", "Remotion", "AI"];
+  
+  return (
+    <div className="yt-card ratio-16-9" onClick={onSelect} style={{height:'260px', border:'1px solid rgba(14,165,233,0.3)'}}>
+      <div className="yt-thumb-wrap" style={{background:'#050505', display:'flex', alignItems:'center', justifyContent:'center'}}>
+         <div style={{fontFamily:'var(--font-mono)', fontSize:'40px', color:'var(--acc)', opacity:0.2}}>{'{ }'}</div>
+      </div>
+      
+      <div className="yt-info-overlay" style={{opacity:1, background:'linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 100%)'}}>
+        <div className="yt-tech-block">
+          <div className="yt-tech-item"><span>RES</span>{tech.resolution}</div>
+          <div className="yt-tech-item"><span>FPS</span>{tech.fps}</div>
+          <div className="yt-tech-item"><span>DUR</span>{tech.duration || tech.dur}</div>
+        </div>
+        <div className="yt-name" style={{fontSize:'24px'}}>{project.name}</div>
+        <div className="yt-narrative-block">
+          <div className="yt-narrative-header">SYSTEM_ARCHITECTURE</div>
+          <div className="yt-narrative-text" style={{fontSize:'12px'}}>{project.description}</div>
+        </div>
+        <div className="yt-tools-block">
+          {tools.map(t => <span key={t} className="yt-tool-tag" style={{borderColor:'var(--acc)', color:'var(--acc)'}}>{t}</span>)}
+        </div>
+      </div>
+      <div className="info-card-scanner"></div>
     </div>
   );
 }
