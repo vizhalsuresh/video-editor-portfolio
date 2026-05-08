@@ -115,6 +115,31 @@
             "AI-Driven",
             "Code-to-Video"
           ]
+        },
+        {
+          "id": "pv2",
+          "name": "Feature Walkthrough",
+          "mediaUrl": "assets/portfolio_features_v1.mp4",
+          "mediaType": "video",
+          "description": "A programmatic feature walkthrough of the Visual Architect workspace. Features a Beethoven-inspired orchestral score and AI-generated voiceover, showcasing the site's interactive NLE timeline and programmatic pipeline through automated captures.",
+          "technical": {
+            "resolution": "4K Cinematic",
+            "fps": "30",
+            "bitrate": "45Mbps",
+            "codec": "H.264",
+            "duration": "00:25"
+          },
+          "tools": [
+            "HyperFrames",
+            "Remotion",
+            "Beethoven AI",
+            "Automated Capture"
+          ],
+          "tags": [
+            "Feature Demo",
+            "Orchestral",
+            "Automation"
+          ]
         }
       ]
     },
