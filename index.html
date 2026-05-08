@@ -385,7 +385,6 @@ function CategoryFolder({ cat, selectedProject, setSelectedProject, setActiveCom
 
 function CinematicIntro({ onComplete }) {
   console.log("Portfolio: Intro Rendering");
-  
   useEffect(() => {
     console.log("Portfolio: Intro Effect Started");
     const tl = gsap.timeline({ 
@@ -394,19 +393,47 @@ function CinematicIntro({ onComplete }) {
         onComplete();
       }
     });
-    
-    // Safety fallback: if GSAP fails, proceed anyway after 6 seconds
+
     const fallback = setTimeout(() => {
         console.warn("Portfolio: Intro Fallback Triggered");
         onComplete();
-    }, 6000);
+    }, 8000);
 
     try {
-      tl.set(".intro-gate", { display: "flex" });
-      tl.from(".intro-sv", { opacity: 0, letterSpacing: "20px", duration: 1.5, ease: "power3.out" });
-      tl.from(".intro-name", { opacity: 0, y: 30, duration: 1.2, ease: "power4.out" }, "-=0.8");
-      tl.from(".intro-quote", { opacity: 0, duration: 1, ease: "power2.out" }, "-=0.4");
-      tl.to(".intro-gate", { opacity: 0, scale: 1.1, duration: 1.2, ease: "power4.inOut", delay: 1.8 });
+      tl.set(".intro-gate", { display: "flex", opacity: 1 });
+      tl.set(".intro-name", { scale: 0.1, opacity: 0, perspective: 1000 });
+
+      // Star Wars style "SURESH VIZHAL" coming forward
+      tl.to(".intro-name", { 
+        scale: 1, 
+        opacity: 1, 
+        duration: 3, 
+        ease: "power2.out" 
+      }, 0.5);
+
+      tl.from(".intro-sv", { 
+        opacity: 0, 
+        y: 20, 
+        duration: 1.5, 
+        ease: "power3.out" 
+      }, 1.5);
+
+      tl.from(".intro-quote", { 
+        opacity: 0, 
+        y: 10, 
+        duration: 1.2, 
+        ease: "power2.out" 
+      }, 2.5);
+
+      // Final transition - scale into the app
+      tl.to(".intro-gate", { 
+        opacity: 0, 
+        scale: 1.5, 
+        duration: 1.5, 
+        ease: "expo.inOut", 
+        delay: 1.5 
+      });
+
     } catch (e) {
       console.error("Portfolio: GSAP Error", e);
       onComplete();
@@ -418,13 +445,16 @@ function CinematicIntro({ onComplete }) {
     };
   }, []);
 
-
   return (
-    <div className="intro-gate">
-      <div className="intro-sv" style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', letterSpacing: '8px', color: 'var(--t3)', marginBottom: '20px' }}>SV — VISUAL ARCHITECT</div>
-      <div className="intro-name" style={{ fontFamily: 'var(--font-hero)', fontSize: '100px', letterSpacing: '-2px' }}>SURESH<span style={{color:'var(--acc)'}}>.</span>VIZHAL</div>
-      <div className="intro-quote" style={{ fontFamily: 'var(--font-main)', fontStyle: 'italic', fontSize: '18px', color: 'var(--t2)', marginTop: '30px' }}>"An editor, rendering himself."</div>
-      <div style={{ marginTop: '40px', fontSize: '10px', color: 'var(--acc)', fontFamily: 'var(--font-mono)' }}>vizhalsuresh.github.io/video-editor-portfolio</div>
+    <div className="intro-gate" style={{
+      position: 'fixed', inset: 0, background: '#000', zIndex: 9999,
+      display: 'none', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+      color: '#fff', textAlign: 'center', pointerEvents: 'none', overflow: 'hidden'
+    }}>
+      <div className="intro-sv" style={{ fontFamily: 'var(--font-mono)', fontSize: '14px', letterSpacing: '12px', color: 'var(--acc)', marginBottom: '30px', fontWeight: 600 }}>SV — VISUAL ARCHITECT</div>
+      <div className="intro-name" style={{ fontFamily: 'var(--font-hero)', fontSize: '120px', letterSpacing: '4px', transformStyle: 'preserve-3d' }}>SURESH VIZHAL</div>
+      <div className="intro-quote" style={{ fontFamily: 'var(--font-main)', fontStyle: 'italic', fontSize: '20px', color: 'var(--t2)', marginTop: '40px', letterSpacing: '1px' }}>"An editor, rendering himself."</div>
+      <div style={{ position: 'absolute', bottom: '50px', fontSize: '10px', color: 'var(--t4)', fontFamily: 'var(--font-mono)', letterSpacing: '3px' }}>INITIALIZING_CREATIVE_SYSTEM_v2.0</div>
     </div>
   );
 }
