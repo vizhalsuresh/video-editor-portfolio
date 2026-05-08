@@ -554,6 +554,7 @@ function YouTubeCard({ item, onExpand }) {
   const tech = item.technical || { resolution: '1080p', fps: '24', dur: '0:30' };
   const description = item.description || "Experimental visual sequence exploring motion and light.";
   const tools = item.tools || ["Premiere Pro", "After Effects", "AI"];
+  const isYogiMeditation = item.name.includes('Conscious') || item.name.includes('Humming') || item.name.includes('Breath') || item.name.includes('Aham') || item.name.includes('Consciousness') || item.name.includes('Intention');
 
   return (
     <div className={`yt-card ratio-${item.ratio.replace(':','-')}`} onClick={onExpand}>
@@ -580,7 +581,7 @@ function YouTubeCard({ item, onExpand }) {
           {tools.map(t => <span key={t} className="yt-tool-tag">{t}</span>)}
         </div>
       </div>
-      <div className="info-card-scanner"></div>
+      {!isYogiMeditation && <div className="info-card-scanner"></div>}
     </div>
   );
 }
@@ -672,6 +673,7 @@ function Player({ project }) {
   const tech = project.technical || { resolution: '1080p', fps: '24', dur: '0:30' };
   const tools = project.tools || ["Premiere Pro", "After Effects", "AI"];
   const showOverlay = !ready || ended;
+  const isYogiMeditation = project.name.includes('Conscious') || project.name.includes('Humming') || project.name.includes('Breath') || project.name.includes('Aham') || project.name.includes('Consciousness') || project.name.includes('Intention');
 
   return (
     <div className="source-monitor fade-in" style={{flexDirection:'column', background:'var(--bg1)'}}>
@@ -717,7 +719,7 @@ function Player({ project }) {
             <div className="yt-tools-block">
               {tools.map(t => <span key={t} className="yt-tool-tag">{t}</span>)}
             </div>
-            <div className="info-card-scanner"></div>
+            {!isYogiMeditation && <div className="info-card-scanner"></div>}
           </div>
         </div>
       )}

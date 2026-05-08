@@ -88,7 +88,7 @@
           "name": "Portfolio Master Reel",
           "mediaUrl": "../final_45s.mp4",
           "mediaType": "video",
-          "description": "Some portfolios are pages. Mine is a workspace, built in code, cut like an edit, five compositions, I'm Suresh Visual. I edit emotion design, I direct content for the screen's people actually watch, Premiere, Photoshop, After Effects, AI tools, not skills instruments. Every project is a sequence. Here's the timeline, shorts that hold a thumb, landscape that earns the screen. If you've watched this far, you know how to find me.",
+          "description": "A coded cinematic workspace built through HyperFrames and Gemini-powered development \u2014 where editing, motion, and interaction merge into one visual system.",
           "technical": {
             "resolution": "4K Master",
             "fps": "23.976",
@@ -97,10 +97,10 @@
             "duration": "00:45"
           },
           "tools": [
-            "Premiere Pro",
-            "After Effects",
-            "AI-Tools",
-            "4K Mastering"
+            "HyperFrames",
+            "Gemini",
+            "Creative Coding",
+            "Motion Design"
           ]
         }
       ]
@@ -118,16 +118,17 @@
             "fps": "29.97",
             "duration": "1:44"
           },
-          "description": "Oneness Global Summit: A 3D mascot-led cinematic opener. Combines spiritual themes with advanced character animation and lighting.",
+          "description": "A cinematic opener for Oneness Global Summit featuring a fully animated 3D mascot, spiritual symbolism, and immersive lighting design.",
           "tags": [
             "3D Animation",
             "Educational",
             "Spiritual"
           ],
           "tools": [
-            "3D Animation",
-            "Character Design",
-            "After Effects"
+            "Nano Banana Pro",
+            "Kling AI",
+            "AI Animation",
+            "Concept Styling"
           ]
         }
       ]
@@ -145,11 +146,12 @@
             "fps": "29.97",
             "duration": "0:17"
           },
-          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "description": "A minimalist meditation experience crafted through AI-generated visuals and refined compositing focused on breath, stillness, and presence.",
           "tools": [
-            "Minimalist Design",
-            "3D Visuals",
-            "Instructional"
+            "AI Visual Generation",
+            "Premiere Pro",
+            "Photoshop",
+            "Compositing"
           ],
           "tags": [
             "Minimalist",
@@ -167,11 +169,12 @@
             "fps": "29.97",
             "duration": "0:12"
           },
-          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "description": "A minimalist meditation experience crafted through AI-generated visuals and refined compositing focused on breath, stillness, and presence.",
           "tools": [
-            "Minimalist Design",
-            "3D Visuals",
-            "Instructional"
+            "AI Visual Generation",
+            "Premiere Pro",
+            "Photoshop",
+            "Compositing"
           ],
           "tags": [
             "Minimalist",
@@ -189,11 +192,12 @@
             "fps": "29.97",
             "duration": "0:14"
           },
-          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "description": "A minimalist meditation experience crafted through AI-generated visuals and refined compositing focused on breath, stillness, and presence.",
           "tools": [
-            "Minimalist Design",
-            "3D Visuals",
-            "Instructional"
+            "AI Visual Generation",
+            "Premiere Pro",
+            "Photoshop",
+            "Compositing"
           ],
           "tags": [
             "Minimalist",
@@ -211,11 +215,12 @@
             "fps": "29.97",
             "duration": "0:09"
           },
-          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "description": "A minimalist meditation experience crafted through AI-generated visuals and refined compositing focused on breath, stillness, and presence.",
           "tools": [
-            "Minimalist Design",
-            "3D Visuals",
-            "Instructional"
+            "AI Visual Generation",
+            "Premiere Pro",
+            "Photoshop",
+            "Compositing"
           ],
           "tags": [
             "Minimalist",
@@ -233,11 +238,12 @@
             "fps": "29.97",
             "duration": "0:16"
           },
-          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "description": "A minimalist meditation experience crafted through AI-generated visuals and refined compositing focused on breath, stillness, and presence.",
           "tools": [
-            "Minimalist Design",
-            "3D Visuals",
-            "Instructional"
+            "AI Visual Generation",
+            "Premiere Pro",
+            "Photoshop",
+            "Compositing"
           ],
           "tags": [
             "Minimalist",
@@ -255,11 +261,12 @@
             "fps": "29.97",
             "duration": "0:10"
           },
-          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "description": "A minimalist meditation experience crafted through AI-generated visuals and refined compositing focused on breath, stillness, and presence.",
           "tools": [
-            "Minimalist Design",
-            "3D Visuals",
-            "Instructional"
+            "AI Visual Generation",
+            "Premiere Pro",
+            "Photoshop",
+            "Compositing"
           ],
           "tags": [
             "Minimalist",
@@ -282,11 +289,16 @@
             "fps": "24.0",
             "duration": "0:33"
           },
-          "description": "A visual representation of karmic liberation, likely part of a meditation or spiritual teaching series.",
+          "description": "An atmospheric visual journey representing karmic release through cinematic textures, layered color, and meditative motion.",
           "tags": [
             "3D Animation",
             "Cinematic",
             "Spiritual"
+          ],
+          "tools": [
+            "AI Visual Design",
+            "Cinematic Compositing",
+            "Color Atmosphere"
           ]
         },
         {
@@ -299,11 +311,16 @@
             "fps": "24.0",
             "duration": "0:59"
           },
-          "description": "Visual exploration of transcendental intelligence, featuring intricate 3D animations and spiritual themes.",
+          "description": "An atmospheric visual journey representing karmic release through cinematic textures, layered color, and meditative motion.",
           "tags": [
             "3D Animation",
             "Technical",
             "Cinematic"
+          ],
+          "tools": [
+            "AI Visual Design",
+            "Cinematic Compositing",
+            "Color Atmosphere"
           ]
         },
         {
@@ -316,11 +333,16 @@
             "fps": "24.0",
             "duration": "0:33"
           },
-          "description": "A visual representation of karmic liberation, likely part of a meditation or spiritual teaching series.",
+          "description": "An atmospheric visual journey representing karmic release through cinematic textures, layered color, and meditative motion.",
           "tags": [
             "3D Animation",
             "Cinematic",
             "Spiritual"
+          ],
+          "tools": [
+            "AI Visual Design",
+            "Cinematic Compositing",
+            "Color Atmosphere"
           ]
         },
         {
@@ -333,11 +355,16 @@
             "fps": "24.0",
             "duration": "1:02"
           },
-          "description": "Visual exploration of transcendental intelligence, featuring intricate 3D animations and spiritual themes.",
+          "description": "An atmospheric visual journey representing karmic release through cinematic textures, layered color, and meditative motion.",
           "tags": [
             "3D Animation",
             "Technical",
             "Cinematic"
+          ],
+          "tools": [
+            "AI Visual Design",
+            "Cinematic Compositing",
+            "Color Atmosphere"
           ]
         }
       ]
