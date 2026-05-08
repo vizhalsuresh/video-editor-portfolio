@@ -1,0 +1,496 @@
+{
+  "profile": {
+    "name": "Suresh Vizhal V R",
+    "title": "Video Editor \u00b7 Motion Graphics \u00b7 AI-Assisted Creative",
+    "bio": "Creative Video Editor with hands-on experience in editing, motion graphics, and AI-assisted content creation. Skilled in transforming raw footage into engaging, high-quality videos aligned with brand and marketing goals.",
+    "photo": "assets/profile.jpg",
+    "contact": {
+      "location": "Chennai, India",
+      "phone": "+91 9043293031",
+      "email": "vizhalsuresh@gmail.com",
+      "instagram": "linkedin.com/in/suresh-vizhal-vr",
+      "linkedin": "Suresh Vizhal V R"
+    }
+  },
+  "compositions": [
+    {
+      "id": "about",
+      "name": "About.comp",
+      "dur": "0:30",
+      "color": "#0ea5e9",
+      "group": "Portfolio"
+    },
+    {
+      "id": "work",
+      "name": "Work_Experience.comp",
+      "dur": "0:45",
+      "color": "#e8854a",
+      "group": "Portfolio"
+    },
+    {
+      "id": "player",
+      "name": "Source_Monitor.comp",
+      "dur": "1:00",
+      "color": "#3ecf6e",
+      "group": "Portfolio"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube_Shorts.comp",
+      "dur": "2:30",
+      "color": "#ff0000",
+      "group": "Portfolio"
+    },
+    {
+      "id": "contact",
+      "name": "Contact.comp",
+      "dur": "0:20",
+      "color": "#3ecfb8",
+      "group": "Portfolio"
+    }
+  ],
+  "workItems": [
+    {
+      "name": "Kosmik Studios",
+      "role": "Video Editor",
+      "period": "Mar 2025\u2013Feb 2026",
+      "color": "#0ea5e9",
+      "desc": "Edited multicam footage and event content into high-quality videos for diverse audiences. Performed advanced green screen keying and compositing for professional outputs.",
+      "tags": [
+        "Multicam Editing",
+        "Green Screen",
+        "Compositing",
+        "AI Tools",
+        "Event Videography"
+      ]
+    },
+    {
+      "name": "Gozzimma TT / Maho Jase IT",
+      "role": "Video Editor & Graphic Designer",
+      "period": "Sep 2023\u2013Jan 2025",
+      "color": "#e8854a",
+      "desc": "Edited promotional and training videos aligned with branding and marketing strategies.",
+      "tags": [
+        "Premiere Pro",
+        "After Effects",
+        "Graphic Design",
+        "Social Media",
+        "Branding"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "name": "Video Editor",
+      "files": [
+        {
+          "id": "ve1",
+          "name": "Portfolio Master Reel",
+          "mediaUrl": "../final_45s.mp4",
+          "mediaType": "video",
+          "description": "Some portfolios are pages. Mine is a workspace, built in code, cut like an edit, five compositions, I'm Suresh Visual. I edit emotion design, I direct content for the screen's people actually watch, Premiere, Photoshop, After Effects, AI tools, not skills instruments. Every project is a sequence. Here's the timeline, shorts that hold a thumb, landscape that earns the screen. If you've watched this far, you know how to find me.",
+          "technical": {
+            "resolution": "4K Master",
+            "fps": "23.976",
+            "bitrate": "45Mbps",
+            "codec": "H.264",
+            "duration": "00:45"
+          },
+          "tools": [
+            "Premiere Pro",
+            "After Effects",
+            "AI-Tools",
+            "4K Mastering"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yogi Opener",
+      "files": [
+        {
+          "id": "yo1",
+          "name": "OGS Mascot",
+          "mediaUrl": "assets/Yogi_opener/OGS_Mascot.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "29.97",
+            "duration": "1:44"
+          },
+          "description": "Oneness Global Summit: A 3D mascot-led cinematic opener. Combines spiritual themes with advanced character animation and lighting.",
+          "tags": [
+            "3D Animation",
+            "Educational",
+            "Spiritual"
+          ],
+          "tools": [
+            "3D Animation",
+            "Character Design",
+            "After Effects"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Yogi Meditation",
+      "files": [
+        {
+          "id": "ym1",
+          "name": "01 - 8 Conscious Breaths",
+          "mediaUrl": "assets/Yogi_Meditation/01 - 8 Conscious Breaths.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "29.97",
+            "duration": "0:17"
+          },
+          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "tools": [
+            "Minimalist Design",
+            "3D Visuals",
+            "Instructional"
+          ],
+          "tags": [
+            "Minimalist",
+            "Instructional",
+            "3D"
+          ]
+        },
+        {
+          "id": "ym2",
+          "name": "02 - 8 Humming Breaths",
+          "mediaUrl": "assets/Yogi_Meditation/02 - 8 Humming Breaths.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "29.97",
+            "duration": "0:12"
+          },
+          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "tools": [
+            "Minimalist Design",
+            "3D Visuals",
+            "Instructional"
+          ],
+          "tags": [
+            "Minimalist",
+            "Instructional",
+            "3D"
+          ]
+        },
+        {
+          "id": "ym3",
+          "name": "03 - 8 Breath Pauses",
+          "mediaUrl": "assets/Yogi_Meditation/03 - 8 Breath Pauses.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "29.97",
+            "duration": "0:14"
+          },
+          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "tools": [
+            "Minimalist Design",
+            "3D Visuals",
+            "Instructional"
+          ],
+          "tags": [
+            "Minimalist",
+            "Instructional",
+            "3D"
+          ]
+        },
+        {
+          "id": "ym4",
+          "name": "04 - 8 Aham Chants",
+          "mediaUrl": "assets/Yogi_Meditation/04 - 8 Aham Chants.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "29.97",
+            "duration": "0:09"
+          },
+          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "tools": [
+            "Minimalist Design",
+            "3D Visuals",
+            "Instructional"
+          ],
+          "tags": [
+            "Minimalist",
+            "Instructional",
+            "3D"
+          ]
+        },
+        {
+          "id": "ym5",
+          "name": "05 - Move into Expanded Consciousness",
+          "mediaUrl": "assets/Yogi_Meditation/05 - Move into Expanded Consciousness.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "29.97",
+            "duration": "0:16"
+          },
+          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "tools": [
+            "Minimalist Design",
+            "3D Visuals",
+            "Instructional"
+          ],
+          "tags": [
+            "Minimalist",
+            "Instructional",
+            "3D"
+          ]
+        },
+        {
+          "id": "ym6",
+          "name": "06 - Hold an Intention",
+          "mediaUrl": "assets/Yogi_Meditation/06 - Hold an Intention.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "29.97",
+            "duration": "0:10"
+          },
+          "description": "Step-by-step meditative sequence focusing on breath and presence. Part of a larger instructional spiritual series.",
+          "tools": [
+            "Minimalist Design",
+            "3D Visuals",
+            "Instructional"
+          ],
+          "tags": [
+            "Minimalist",
+            "Instructional",
+            "3D"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Animation Videos",
+      "files": [
+        {
+          "id": "av1",
+          "name": "01 - Karmic Liberation",
+          "mediaUrl": "assets/Animation_Videos/01 - Karmic Liberation.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "24.0",
+            "duration": "0:33"
+          },
+          "description": "A visual representation of karmic liberation, likely part of a meditation or spiritual teaching series.",
+          "tags": [
+            "3D Animation",
+            "Cinematic",
+            "Spiritual"
+          ]
+        },
+        {
+          "id": "av2",
+          "name": "02 - Transcendental Intelligence",
+          "mediaUrl": "assets/Animation_Videos/02 - Transcendental Intelligence.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "24.0",
+            "duration": "0:59"
+          },
+          "description": "Visual exploration of transcendental intelligence, featuring intricate 3D animations and spiritual themes.",
+          "tags": [
+            "3D Animation",
+            "Technical",
+            "Cinematic"
+          ]
+        },
+        {
+          "id": "av3",
+          "name": "03 - Karmic Liberation",
+          "mediaUrl": "assets/Animation_Videos/03 - Karmic Liberation.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "24.0",
+            "duration": "0:33"
+          },
+          "description": "A visual representation of karmic liberation, likely part of a meditation or spiritual teaching series.",
+          "tags": [
+            "3D Animation",
+            "Cinematic",
+            "Spiritual"
+          ]
+        },
+        {
+          "id": "av4",
+          "name": "04 - Transcendental Intelligence",
+          "mediaUrl": "assets/Animation_Videos/04 - Transcendental Intelligence.mp4",
+          "mediaType": "video",
+          "technical": {
+            "resolution": "1920x1080",
+            "fps": "24.0",
+            "duration": "1:02"
+          },
+          "description": "Visual exploration of transcendental intelligence, featuring intricate 3D animations and spiritual themes.",
+          "tags": [
+            "3D Animation",
+            "Technical",
+            "Cinematic"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Posters",
+      "files": [
+        {
+          "id": "p1",
+          "name": "Tapas Pamphlet",
+          "mediaUrl": "assets/posters/Turya.jpeg",
+          "mediaType": "image",
+          "technical": {
+            "resolution": "1080p",
+            "fps": "24",
+            "dur": "0:30"
+          }
+        },
+        {
+          "id": "p2",
+          "name": "Soul Sync Cluster",
+          "mediaUrl": "assets/posters/Soul_Sync_Cluster.jpg",
+          "mediaType": "image",
+          "technical": {
+            "resolution": "1080p",
+            "fps": "24",
+            "dur": "0:30"
+          }
+        },
+        {
+          "id": "p3",
+          "name": "Certificate",
+          "mediaUrl": "assets/posters/Mind_Body_Consciousness_wellness program copy.jpg",
+          "mediaType": "image",
+          "technical": {
+            "resolution": "1080p",
+            "fps": "24",
+            "dur": "0:30"
+          }
+        },
+        {
+          "id": "p4",
+          "name": "New Oneness Tapas Board",
+          "mediaUrl": "assets/posters/New_Oneness Tapas Board 42.5__64_ NEW OP 2 copy.jpg",
+          "mediaType": "image",
+          "technical": {
+            "resolution": "1080p",
+            "fps": "24",
+            "dur": "0:30"
+          }
+        },
+        {
+          "id": "p5",
+          "name": "Soul Sync Poster",
+          "mediaUrl": "assets/posters/Soul SYnc POster 6_3_ftArtboard 1.jpg",
+          "mediaType": "image",
+          "technical": {
+            "resolution": "1080p",
+            "fps": "24",
+            "dur": "0:30"
+          }
+        },
+        {
+          "id": "p6",
+          "name": "Yogi Clean Plate",
+          "mediaUrl": "assets/posters/Final Mediatation pose.jpg",
+          "mediaType": "image",
+          "technical": {
+            "resolution": "1080p",
+            "fps": "24",
+            "dur": "0:30"
+          }
+        },
+        {
+          "id": "p7",
+          "name": "Tapas Poster",
+          "mediaUrl": "assets/posters/1920_1080.jpg",
+          "mediaType": "image",
+          "technical": {
+            "resolution": "1080p",
+            "fps": "24",
+            "dur": "0:30"
+          }
+        },
+        {
+          "id": "p9",
+          "name": "Logo",
+          "mediaUrl": "assets/posters/final (1).svg",
+          "mediaType": "image",
+          "technical": {
+            "resolution": "1080p",
+            "fps": "24",
+            "dur": "0:30"
+          }
+        }
+      ]
+    }
+  ],
+  "youtubeProjects": [
+    {
+      "id": "yt1",
+      "name": "Cinematic Visuals 01",
+      "ytId": "hO-ic_L74Dc",
+      "ratio": "16:9",
+      "technical": {
+        "resolution": "4K",
+        "fps": "23.976",
+        "dur": "0:45"
+      }
+    },
+    {
+      "id": "yt2",
+      "name": "Motion Graphics Reel",
+      "ytId": "3Pg-w19rbSM",
+      "ratio": "9:16",
+      "technical": {
+        "resolution": "1080p",
+        "fps": "60",
+        "dur": "0:15"
+      }
+    },
+    {
+      "id": "yt3",
+      "name": "Post Production Flow",
+      "ytId": "LFdEB0f7DUs",
+      "ratio": "16:9",
+      "technical": {
+        "resolution": "4K",
+        "fps": "24",
+        "dur": "1:20"
+      }
+    },
+    {
+      "id": "yt4",
+      "name": "Visual Effects Breakdown",
+      "ytId": "izjxTA_-mNs",
+      "ratio": "9:16",
+      "technical": {
+        "resolution": "1080p",
+        "fps": "30",
+        "dur": "0:50"
+      }
+    },
+    {
+      "id": "yt5",
+      "name": "Digital Artistry",
+      "ytId": "7WrnD1lmpF0",
+      "ratio": "16:9",
+      "technical": {
+        "resolution": "4K",
+        "fps": "23.976",
+        "dur": "0:35"
+      }
+    }
+  ]
+}
