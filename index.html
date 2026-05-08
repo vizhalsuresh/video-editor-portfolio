@@ -326,6 +326,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg0);}
 <div id="root"></div>
 
 <script type="text/babel">
+console.log("Portfolio: Script Start");
 const { useState, useEffect, useRef } = React;
 const { createPortal } = ReactDOM;
 
@@ -383,14 +384,40 @@ function CategoryFolder({ cat, selectedProject, setSelectedProject, setActiveCom
 }
 
 function CinematicIntro({ onComplete }) {
+  console.log("Portfolio: Intro Rendering");
+  
   useEffect(() => {
-    const tl = gsap.timeline({ onComplete });
-    tl.set(".intro-gate", { display: "flex" });
-    tl.from(".intro-sv", { opacity: 0, letterSpacing: "20px", duration: 1.5, ease: "power3.out" });
-    tl.from(".intro-name", { opacity: 0, y: 30, duration: 1.2, ease: "power4.out" }, "-=0.8");
-    tl.from(".intro-quote", { opacity: 0, duration: 1, ease: "power2.out" }, "-=0.4");
-    tl.to(".intro-gate", { opacity: 0, scale: 1.1, duration: 1.2, ease: "power4.inOut", delay: 1.8 });
+    console.log("Portfolio: Intro Effect Started");
+    const tl = gsap.timeline({ 
+      onComplete: () => {
+        console.log("Portfolio: Intro GSAP Complete");
+        onComplete();
+      }
+    });
+    
+    // Safety fallback: if GSAP fails, proceed anyway after 6 seconds
+    const fallback = setTimeout(() => {
+        console.warn("Portfolio: Intro Fallback Triggered");
+        onComplete();
+    }, 6000);
+
+    try {
+      tl.set(".intro-gate", { display: "flex" });
+      tl.from(".intro-sv", { opacity: 0, letterSpacing: "20px", duration: 1.5, ease: "power3.out" });
+      tl.from(".intro-name", { opacity: 0, y: 30, duration: 1.2, ease: "power4.out" }, "-=0.8");
+      tl.from(".intro-quote", { opacity: 0, duration: 1, ease: "power2.out" }, "-=0.4");
+      tl.to(".intro-gate", { opacity: 0, scale: 1.1, duration: 1.2, ease: "power4.inOut", delay: 1.8 });
+    } catch (e) {
+      console.error("Portfolio: GSAP Error", e);
+      onComplete();
+    }
+
+    return () => {
+        clearTimeout(fallback);
+        tl.kill();
+    };
   }, []);
+
 
   return (
     <div className="intro-gate">
@@ -403,6 +430,7 @@ function CinematicIntro({ onComplete }) {
 }
 
 function App() {
+  console.log("Portfolio: App Rendering");
   const [data, setData] = useState(null);
   const [activeComp, setActiveComp] = useState('about');
   const [selectedProject, setSelectedProject] = useState(null);
