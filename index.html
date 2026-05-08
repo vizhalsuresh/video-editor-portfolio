@@ -323,15 +323,24 @@ function formatTime(pct) {
 
 function Skill({ name, pct, color }) {
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className="skill-item">
       <div className="skill-label"><span>{name}</span><span>{pct}%</span></div>
       <div className="skill-bar-track"><div className="skill-bar-fill" style={{width: `${pct}%`, background: color}} /></div>
     </div>
+    </>
   );
 }
 function MainFolder({ title, items, activeComp, setActiveComp }) {
   const [isOpen, setIsOpen] = useState(true);
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div>
       <div className="proj-section" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', transition: 'color 0.2s' }} onClick={() => setIsOpen(!isOpen)}>
         <span style={{ fontSize: '8px', opacity: 0.7, transform: isOpen ? 'rotate(0deg)' : 'rotate(-90deg)', transition: 'transform 0.2s', display: 'inline-block' }}>▼</span> 
@@ -345,12 +354,17 @@ function MainFolder({ title, items, activeComp, setActiveComp }) {
         </div>
       ))}
     </div>
+    </>
   );
 }
 
 function CategoryFolder({ cat, selectedProject, setSelectedProject, setActiveComp }) {
   const [isOpen, setIsOpen] = useState(true);
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div>
       <div className="proj-section" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', transition: 'color 0.2s' }} onClick={() => setIsOpen(!isOpen)}>
         <span style={{ fontSize: '8px', opacity: 0.7, transform: isOpen ? 'rotate(0deg)' : 'rotate(-90deg)', transition: 'transform 0.2s', display: 'inline-block' }}>▼</span> 
@@ -364,6 +378,66 @@ function CategoryFolder({ cat, selectedProject, setSelectedProject, setActiveCom
         </div>
       ))}
     </div>
+    </>
+  );
+}
+
+
+function CinematicIntro({ onComplete }) {
+  useEffect(() => {
+    const tl = gsap.timeline({ onComplete });
+    tl.set(".intro-gate", { display: "flex" });
+    tl.from(".intro-sv", { opacity: 0, letterSpacing: "20px", duration: 1.5, ease: "power3.out" });
+    tl.from(".intro-name", { opacity: 0, y: 30, duration: 1.2, ease: "power4.out" }, "-=0.8");
+    tl.from(".intro-quote", { opacity: 0, duration: 1, ease: "power2.out" }, "-=0.4");
+    tl.to(".intro-gate", { opacity: 0, scale: 1.1, duration: 1, ease: "power4.inOut", delay: 1.5 });
+  }, []);
+
+  return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <div className="intro-gate" style={{
+      position: 'fixed', inset: 0, background: '#000', z_index: 9999,
+      display: 'none', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+      color: '#fff', textAlign: 'center'
+    }}>
+      <div className="intro-sv" style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', letterSpacing: '8px', color: 'var(--t3)', marginBottom: '20px' }}>SV — VISUAL ARCHITECT</div>
+      <div className="intro-name" style={{ fontFamily: 'var(--font-hero)', fontSize: '100px', letterSpacing: '-2px' }}>SURESH<span style={{color:'var(--acc)'}}>.</span>VIZHAL</div>
+      <div className="intro-quote" style={{ fontFamily: 'var(--font-main)', fontStyle: 'italic', fontSize: '18px', color: 'var(--t2)', marginTop: '30px' }}>"An editor, rendering himself."</div>
+      <div style={{ marginTop: '40px', fontSize: '10px', color: 'var(--acc)', fontFamily: 'var(--font-mono)' }}>vizhalsuresh.github.io/visual-architect</div>
+    </div>
+    </>
+  );
+}
+
+
+
+function CinematicIntro({ onComplete }) {
+  useEffect(() => {
+    const tl = gsap.timeline({ onComplete });
+    tl.set(".intro-gate", { display: "flex" });
+    tl.from(".intro-sv", { opacity: 0, letterSpacing: "20px", duration: 1.5, ease: "power3.out" });
+    tl.from(".intro-name", { opacity: 0, y: 30, duration: 1.2, ease: "power4.out" }, "-=0.8");
+    tl.from(".intro-quote", { opacity: 0, duration: 1, ease: "power2.out" }, "-=0.4");
+    tl.to(".intro-gate", { opacity: 0, scale: 1.1, duration: 1, ease: "power4.inOut", delay: 2.0 });
+  }, []);
+
+  return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <div className="intro-gate" style={{
+      position: 'fixed', inset: 0, background: '#000', zIndex: 9999,
+      display: 'none', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+      color: '#fff', textAlign: 'center', pointerEvents: 'none'
+    }}>
+      <div className="intro-sv" style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', letterSpacing: '8px', color: 'var(--t3)', marginBottom: '20px' }}>SV — VISUAL ARCHITECT</div>
+      <div className="intro-name" style={{ fontFamily: 'var(--font-hero)', fontSize: '100px', letterSpacing: '-2px' }}>SURESH<span style={{color:'var(--acc)'}}>.</span>VIZHAL</div>
+      <div className="intro-quote" style={{ fontFamily: 'var(--font-main)', fontStyle: 'italic', fontSize: '18px', color: 'var(--t2)', marginTop: '30px' }}>"An editor, rendering himself."</div>
+      <div style={{ marginTop: '40px', fontSize: '10px', color: 'var(--acc)', fontFamily: 'var(--font-mono)' }}>vizhalsuresh.github.io/video-editor-portfolio</div>
+    </div>
+    </>
   );
 }
 
@@ -373,6 +447,24 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [playhead, setPlayhead] = useState(8);
   const [loading, setLoading] = useState(true);
+  const [introVisible, setIntroVisible] = useState(true);
+  const [introVisible, setIntroVisible] = useState(true);
+
+  useEffect(() => {
+    fetch('./data.json?v=' + new Date().getTime()).then(res => res.json()).then(d => { 
+        setData(d); 
+        const allProjects = d.categories ? d.categories.flatMap(c => c.files) : [];
+        if(allProjects.length > 0) setSelectedProject(allProjects.find(p => p.mediaType === 'video') || allProjects[0]);
+        setLoading(false); 
+    });
+  }, []);
+
+  const [data, setData] = useState(null);
+  const [activeComp, setActiveComp] = useState('about');
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [playhead, setPlayhead] = useState(8);
+  const [loading, setLoading] = useState(true);
+  const [introVisible, setIntroVisible] = useState(true);
 
   useEffect(() => {
     fetch('./data.json?v=' + new Date().getTime()).then(res => res.json()).then(d => { 
@@ -385,7 +477,11 @@ function App() {
 
   useEffect(() => {
     const id = setInterval(() => setPlayhead(p => p >= 100 ? 0 : p + 0.08), 100);
-    return () => clearInterval(id);
+    return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}) => clearInterval(id);
   }, []);
 
   if (loading) return <div style={{color:'var(--acc)', background:'#000', height:'100vh', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:'monospace', letterSpacing:'4px'}}>INITIALIZING WORKSPACE...</div>;
@@ -402,6 +498,10 @@ function App() {
   ];
 
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className="app">
       <div className="menubar">
         <div className="menubar-brand">SV</div>
@@ -459,11 +559,16 @@ function App() {
 
       <Timeline activeComp={activeComp} setSelectedProject={setSelectedProject} setActiveComp={setActiveComp} playhead={playhead} setPlayhead={setPlayhead} timelineTracks={timelineTracks} selectedProject={selectedProject} />
     </div>
+    </>
   );
 }
 
 function About({ profile }) {
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className="premium-page-container fade-in">
       <div className="hero-photo-area">
         <img src={profile.photo} alt="Suresh Vizhal" />
@@ -481,11 +586,16 @@ function About({ profile }) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
 function Contact({ profile }) {
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className="premium-page-container fade-in" style={{flexDirection:'column', justifyContent:'center', alignItems:'flex-start'}}>
       <div className="hero-title" style={{letterSpacing:'8px', marginBottom:'40px'}}>ESTABLISH CONNECTION</div>
       <div className="contact-grid">
@@ -503,6 +613,7 @@ function Contact({ profile }) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
@@ -516,10 +627,18 @@ function YouTubeGrid({ items }) {
     if (!expanded) return;
     const onKey = e => { if (e.key === 'Escape') setExpanded(null); };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}) => window.removeEventListener('keydown', onKey);
   }, [expanded]);
 
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className="yt-section fade-in">
       <div className="yt-column">
         <div className="yt-col-header">
@@ -547,6 +666,7 @@ function YouTubeGrid({ items }) {
       </div>
       {expanded && <YTLightbox item={expanded} onClose={() => setExpanded(null)} />}
     </div>
+    </>
   );
 }
 
@@ -557,6 +677,10 @@ function YouTubeCard({ item, onExpand }) {
   const isYogiMeditation = item.name.includes('Conscious') || item.name.includes('Humming') || item.name.includes('Breath') || item.name.includes('Aham') || item.name.includes('Consciousness') || item.name.includes('Intention');
 
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className={`yt-card ratio-${item.ratio.replace(':','-')}`} onClick={onExpand}>
       <div className="yt-thumb-wrap">
         <YTThumb ytId={item.ytId} name={item.name} />
@@ -583,6 +707,7 @@ function YouTubeCard({ item, onExpand }) {
       </div>
       {!isYogiMeditation && <div className="info-card-scanner"></div>}
     </div>
+    </>
   );
 }
 
@@ -597,6 +722,10 @@ function YTThumb({ ytId, name }) {
   const [loaded, setLoaded] = useState(false);
 
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div style={{position:'absolute', inset:0}}>
       {!loaded && (
         <div className="yt-thumb-loader">
@@ -622,6 +751,7 @@ function YTThumb({ ytId, name }) {
         }}
       />
     </div>
+    </>
   );
 }
 
@@ -667,6 +797,10 @@ function Player({ project }) {
   }, [project?.id]);
 
   if (!project) return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className="source-monitor"><span style={{color:'var(--t4)'}}>NO SOURCE LOADED</span></div>
   );
 
@@ -676,6 +810,10 @@ function Player({ project }) {
   const isYogiMeditation = project.name.includes('Conscious') || project.name.includes('Humming') || project.name.includes('Breath') || project.name.includes('Aham') || project.name.includes('Consciousness') || project.name.includes('Intention');
 
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className="source-monitor fade-in" style={{flexDirection:'column', background:'var(--bg1)'}}>
       <div style={{marginBottom:'15px', color:'var(--t1)', fontSize:'18px', fontWeight:'bold',
                    letterSpacing:'2px', textAlign:'center', opacity: ready ? 1 : 0.4, transition:'opacity 0.3s'}}>
@@ -733,11 +871,16 @@ function Player({ project }) {
         </div>
       )}
     </div>
+    </>
   );
 }
 
 function Work({ workItems }) {
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className="comp-work fade-in" style={{padding:'60px 40px'}}>
       <h2 className="hero-name" style={{fontSize:'64px', marginBottom:'60px'}}>Sequence History</h2>
       {workItems.map((w, i) => (
@@ -750,6 +893,7 @@ function Work({ workItems }) {
         </div>
       ))}
     </div>
+    </>
   );
 }
 
@@ -758,6 +902,10 @@ function PropertiesPanel({ activeComp, compositions, selectedProject }) {
   const tech = selectedProject?.technical || { resolution: '3840 × 2160', fps: '23.976', duration: '0:30' };
   
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className="panel properties-panel">
       <div className="panel-header"><div className="panel-icon">P</div><span className="panel-title">Metadata Inspector</span></div>
       <div className="prop-section">
@@ -786,6 +934,7 @@ function PropertiesPanel({ activeComp, compositions, selectedProject }) {
         </div>
       )}
     </div>
+    </>
   );
 }
 
@@ -793,6 +942,10 @@ function Timeline({ activeComp, setSelectedProject, setActiveComp, playhead, set
   const [hoveredClip, setHoveredClip] = useState(null);
 
   return (
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
+    <>
+      {introVisible && <CinematicIntro onComplete={() => setIntroVisible(false)} />}
     <div className="timeline">
       <div className="timeline-header">
         <div className="panel-icon" style={{ background: 'var(--orange)' }}>T</div>
@@ -832,6 +985,7 @@ function Timeline({ activeComp, setSelectedProject, setActiveComp, playhead, set
         </div>
       </div>
     </div>
+    </>
   );
 }
 

@@ -85,8 +85,8 @@
       "files": [
         {
           "id": "ve1",
-          "name": "Portfolio Master Reel",
-          "mediaUrl": "../final_45s.mp4",
+          "name": "Portfolio Master Reel (v2)",
+          "mediaUrl": "assets/portfolio_walkthrough.mp4",
           "mediaType": "video",
           "description": "A coded cinematic workspace built through HyperFrames and Gemini-powered development \u2014 where editing, motion, and interaction merge into one visual system.",
           "technical": {
