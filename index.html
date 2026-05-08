@@ -698,7 +698,7 @@ function Player({ project }) {
                      alignItems:'center', justifyContent:'center', flexShrink:0}}>
 
           {!ready && (
-            <div style={{position:'absolute', zIndex: 10, display:'flex', flexDirection:'column', alignItems:'center', gap:'12px'}}>
+            <div style={{position:'absolute', inset: 0, zIndex: 10, display:'flex', flexDirection:'column', alignItems:'center', justifyContent: 'center', gap:'12px', background: 'var(--bg1)'}}>
               <div className="va-spinner" />
               <div style={{fontSize:'10px', color:'var(--acc)', fontFamily:'var(--font-mono)', letterSpacing:'3px', fontWeight:700}}>SYNCHRONIZING_SEQUENCE</div>
             </div>
