@@ -49,6 +49,36 @@
       "group": "Portfolio"
     }
   ],
+  "workItems": [
+    {
+      "name": "Kosmik Studios",
+      "role": "Video Editor",
+      "period": "Mar 2025\u2013Feb 2026",
+      "color": "#0ea5e9",
+      "desc": "Edited multicam footage and event content into high-quality videos for diverse audiences. Performed advanced green screen keying and compositing for professional outputs.",
+      "tags": [
+        "Multicam Editing",
+        "Green Screen",
+        "Compositing",
+        "AI Tools",
+        "Event Videography"
+      ]
+    },
+    {
+      "name": "Gozzimma TT / Maho Jase IT",
+      "role": "Video Editor & Graphic Designer",
+      "period": "Sep 2023\u2013Jan 2025",
+      "color": "#e8854a",
+      "desc": "Edited promotional and training videos aligned with branding and marketing strategies.",
+      "tags": [
+        "Premiere Pro",
+        "After Effects",
+        "Graphic Design",
+        "Social Media",
+        "Branding"
+      ]
+    }
+  ],
   "categories": [
     {
       "name": "Code-to-video rendering",
@@ -385,41 +415,6 @@
             "fps": "24",
             "dur": "0:30"
           }
-        }
-      ]
-    },
-    {
-      "name": "Professional Experience",
-      "files": [
-        {
-          "id": "exp1",
-          "name": "Visual Architect",
-          "role": "Video Editor",
-          "period": "Mar 2025\u2013Feb 2026",
-          "color": "#0ea5e9",
-          "desc": "Edited multicam footage and event content into high-quality videos for diverse audiences. Performed advanced green screen keying and compositing for professional outputs.",
-          "tags": [
-            "Multicam Editing",
-            "Green Screen",
-            "Compositing",
-            "AI Tools",
-            "Event Videography"
-          ]
-        },
-        {
-          "id": "exp2",
-          "name": "Gozzimma TT / Maho Jase IT",
-          "role": "Video Editor & Graphic Designer",
-          "period": "Sep 2023\u2013Jan 2025",
-          "color": "#e8854a",
-          "desc": "Edited promotional and training videos aligned with branding and marketing strategies.",
-          "tags": [
-            "Premiere Pro",
-            "After Effects",
-            "Graphic Design",
-            "Social Media",
-            "Branding"
-          ]
         }
       ]
     }
