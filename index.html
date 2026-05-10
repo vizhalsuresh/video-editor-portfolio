@@ -320,13 +320,112 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg0);}
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   color: #fff; text-align: center;
 }
+
+@media (max-width: 900px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+  .main-area {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-bottom: none;
+  }
+  .panel {
+    border-right: none;
+    border-bottom: 1px solid var(--b1);
+    height: auto;
+    max-height: none;
+  }
+  .project-panel {
+    order: 2;
+    max-height: 300px;
+  }
+  .viewer {
+    order: 1;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+  .properties-panel {
+    order: 4;
+  }
+  .timeline {
+    order: 3;
+    height: auto;
+    min-height: 180px;
+  }
+  .timeline-body {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tl-scrub {
+    min-width: 600px;
+  }
+  .premium-page-container {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-photo-area {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 3/4;
+    margin: 0 auto;
+  }
+  .hero-name {
+    font-size: 48px;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .hero-bio {
+    font-size: 14px;
+    text-align: center;
+  }
+  .skill-grid {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+  .yt-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    height: auto;
+  }
+  .yt-column {
+    width: 100% !important;
+  }
+  .yt-landscape-list {
+    grid-template-columns: 1fr;
+  }
+  .contact-value-big {
+    font-size: 24px;
+    word-break: break-all;
+  }
+  .intro-name {
+    font-size: 60px !important;
+  }
+  .intro-sv {
+    font-size: 10px !important;
+    letter-spacing: 6px !important;
+  }
+}
 </style>
 </head>
 <body>
 <div id="static-intro" style="position:fixed; inset:0; background:#000; z-index:10000; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; text-align:center; font-family:sans-serif; overflow:hidden;">
-  <div style="font-family: monospace; font-size:14px; letter-spacing:12px; color:#0ea5e9; margin-bottom:30px; font-weight:600;">SV — VISUAL ARCHITECT</div>
-  <div style="font-family: 'Bebas Neue', sans-serif; font-size:120px; letter-spacing:4px;">SURESH VIZHAL</div>
-  <div style="font-family: serif; font-style:italic; font-size:20px; color:#a1a1a6; margin-top:40px; letter-spacing:1px;">"An editor, rendering himself."</div>
+  <div style="font-family: monospace; font-size:14px; letter-spacing:12px; color:#0ea5e9; margin-bottom:30px; font-weight:600; opacity:0;">SV — VISUAL ARCHITECT</div>
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size:120px; letter-spacing:4px; opacity:0; transform:scale(0.1);">SURESH VIZHAL</div>
+  <div style="font-family: serif; font-style:italic; font-size:20px; color:#a1a1a6; margin-top:40px; letter-spacing:1px; opacity:0;">"An editor, rendering himself."</div>
   <div style="position:absolute; bottom:50px; font-size:10px; color:#424245; font-family:monospace; letter-spacing:3px;">INITIALIZING_CREATIVE_SYSTEM_v2.0</div>
 </div>
 <div id="root"></div>
