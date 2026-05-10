@@ -323,6 +323,12 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg0);}
 </style>
 </head>
 <body>
+<div id="static-intro" style="position:fixed; inset:0; background:#000; z-index:10000; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; text-align:center; font-family:sans-serif; overflow:hidden;">
+  <div style="font-family: monospace; font-size:14px; letter-spacing:12px; color:#0ea5e9; margin-bottom:30px; font-weight:600;">SV — VISUAL ARCHITECT</div>
+  <div style="font-family: 'Bebas Neue', sans-serif; font-size:120px; letter-spacing:4px;">SURESH VIZHAL</div>
+  <div style="font-family: serif; font-style:italic; font-size:20px; color:#a1a1a6; margin-top:40px; letter-spacing:1px;">"An editor, rendering himself."</div>
+  <div style="position:absolute; bottom:50px; font-size:10px; color:#424245; font-family:monospace; letter-spacing:3px;">INITIALIZING_CREATIVE_SYSTEM_v2.0</div>
+</div>
 <div id="root"></div>
 
 <script type="text/babel">
@@ -386,6 +392,10 @@ function CategoryFolder({ cat, selectedProject, setSelectedProject, setActiveCom
 function CinematicIntro({ onComplete }) {
   console.log("Portfolio: Intro Rendering");
   useEffect(() => {
+    // Remove the static intro once React is ready to animate
+    const staticIntro = document.getElementById('static-intro');
+    if (staticIntro) staticIntro.remove();
+
     console.log("Portfolio: Intro Effect Started");
     const tl = gsap.timeline({ 
       onComplete: () => {
