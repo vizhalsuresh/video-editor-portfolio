@@ -619,13 +619,13 @@ function YouTubeGrid({ items }) {
 
   return (
     <div className="yt-section fade-in">
-      <div className="yt-column">
+      <div className="yt-column" style={{ width: '280px' }}>
         <div className="yt-col-header">
           <div className="yt-col-dot" style={{background:'var(--purple)', color:'var(--purple)'}} />
-          <span className="yt-col-title">Shorts · 9:16 Vertical</span>
+          <span className="yt-col-title">Shorts · 9:16</span>
           <span className="yt-col-count">{String(shorts.length).padStart(2,'0')} CLIPS</span>
         </div>
-        <div className="yt-shorts-list">
+        <div className="yt-shorts-list" style={{ gap: '20px' }}>
           {shorts.map(item => (
             <YouTubeCard key={item.id} item={item} onExpand={() => setExpanded(item)} />
           ))}
@@ -634,10 +634,10 @@ function YouTubeGrid({ items }) {
       <div className="yt-column">
         <div className="yt-col-header">
           <div className="yt-col-dot" style={{background:'var(--acc)', color:'var(--acc)'}} />
-          <span className="yt-col-title">Landscape · 16:9 Cinematic</span>
+          <span className="yt-col-title">Cinematic · 16:9</span>
           <span className="yt-col-count">{String(landscape.length).padStart(2,'0')} CLIPS</span>
         </div>
-        <div className="yt-landscape-list">
+        <div className="yt-landscape-list" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '24px' }}>
           {landscape.map(item => (
             <YouTubeCard key={item.id} item={item} onExpand={() => setExpanded(item)} />
           ))}
@@ -700,8 +700,7 @@ function ProgrammaticCard({ project, onSelect }) {
 function YouTubeCard({ item, onExpand }) {
   const tech = item.technical || { resolution: '1080p', fps: '24', dur: '0:30' };
   const description = item.description || "Experimental visual sequence exploring motion and light.";
-  const tools = item.tools || ["Premiere Pro", "After Effects", "AI"];
-  const isYogiMeditation = item.name.includes('Conscious') || item.name.includes('Humming') || item.name.includes('Breath') || item.name.includes('Aham') || item.name.includes('Consciousness') || item.name.includes('Intention');
+  const isYoutubeItem = !!item.ytId;
 
   return (
     <div className={`yt-card ratio-${item.ratio.replace(':','-')}`} onClick={onExpand}>
@@ -719,16 +718,18 @@ function YouTubeCard({ item, onExpand }) {
           <div className="yt-tech-item"><span>FPS</span>{tech.fps}</div>
           <div className="yt-tech-item"><span>DUR</span>{tech.duration || tech.dur}</div>
         </div>
-        <div className="yt-name">{item.name}</div>
+        <div className="yt-name" style={{fontSize: isYoutubeItem ? '24px' : ''}}>{item.name}</div>
         <div className="yt-narrative-block">
           <div className="yt-narrative-header">NARRATIVE</div>
           <div className="yt-narrative-text">{description}</div>
         </div>
-        <div className="yt-tools-block">
-          {tools.map(t => <span key={t} className="yt-tool-tag">{t}</span>)}
-        </div>
+        {!isYoutubeItem && item.tools && (
+          <div className="yt-tools-block">
+            {item.tools.map(t => <span key={t} className="yt-tool-tag">{t}</span>)}
+          </div>
+        )}
       </div>
-      {!isYogiMeditation && <div className="info-card-scanner"></div>}
+      {!isYoutubeItem && <div className="info-card-scanner"></div>}
     </div>
   );
 }

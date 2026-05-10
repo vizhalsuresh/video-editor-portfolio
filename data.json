@@ -36,7 +36,7 @@
     },
     {
       "id": "youtube",
-      "name": "YouTube_Shorts.comp",
+      "name": "YouTube_Works.comp",
       "dur": "2:30",
       "color": "#ff0000",
       "group": "Portfolio"
@@ -427,7 +427,7 @@
   "youtubeProjects": [
     {
       "id": "yt1",
-      "name": "Cinematic Visuals 01",
+      "name": "The New Manifest Series - 2026",
       "ytId": "hO-ic_L74Dc",
       "ratio": "16:9",
       "technical": {
@@ -438,7 +438,7 @@
     },
     {
       "id": "yt2",
-      "name": "Motion Graphics Reel",
+      "name": "How Can I Use Anger As A Strength?",
       "ytId": "3Pg-w19rbSM",
       "ratio": "9:16",
       "technical": {
@@ -449,7 +449,7 @@
     },
     {
       "id": "yt3",
-      "name": "Post Production Flow",
+      "name": "Experiencing the Magic of the Oneness Abundance Festival",
       "ytId": "LFdEB0f7DUs",
       "ratio": "16:9",
       "technical": {
@@ -460,7 +460,7 @@
     },
     {
       "id": "yt4",
-      "name": "Visual Effects Breakdown",
+      "name": "The Vision Of Oneness",
       "ytId": "izjxTA_-mNs",
       "ratio": "9:16",
       "technical": {
@@ -471,7 +471,7 @@
     },
     {
       "id": "yt5",
-      "name": "Digital Artistry",
+      "name": "Oneness Health Festival",
       "ytId": "7WrnD1lmpF0",
       "ratio": "16:9",
       "technical": {
