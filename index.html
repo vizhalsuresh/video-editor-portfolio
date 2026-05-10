@@ -541,12 +541,6 @@ function App() {
               {activeComp === 'about' && <About profile={profile} />}
               {activeComp === 'work' && <Work workItems={workItems} />}
               {activeComp === 'player' && <Player project={selectedProject} />}
-              {activeComp === 'programmatic' && (
-                <ProgrammaticGrid 
-                  projects={categories.find(c => c.name === 'Programmatic Video')?.files || []} 
-                  onSelect={(p) => { setSelectedProject(p); setActiveComp('player'); }}
-                />
-              )}
               {activeComp === 'youtube' && <YouTubeGrid items={youtubeProjects} />}
               {activeComp === 'contact' && <Contact profile={profile} />}
             </div>

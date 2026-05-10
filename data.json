@@ -35,13 +35,6 @@
       "group": "Portfolio"
     },
     {
-      "id": "programmatic",
-      "name": "Programmatic_Pipeline.comp",
-      "dur": "0:45",
-      "color": "#3ecfb8",
-      "group": "Portfolio"
-    },
-    {
       "id": "youtube",
       "name": "YouTube_Shorts.comp",
       "dur": "2:30",
@@ -56,95 +49,9 @@
       "group": "Portfolio"
     }
   ],
-  "workItems": [
-    {
-      "name": "Kosmik Studios",
-      "role": "Video Editor",
-      "period": "Mar 2025\u2013Feb 2026",
-      "color": "#0ea5e9",
-      "desc": "Edited multicam footage and event content into high-quality videos for diverse audiences. Performed advanced green screen keying and compositing for professional outputs.",
-      "tags": [
-        "Multicam Editing",
-        "Green Screen",
-        "Compositing",
-        "AI Tools",
-        "Event Videography"
-      ]
-    },
-    {
-      "name": "Gozzimma TT / Maho Jase IT",
-      "role": "Video Editor & Graphic Designer",
-      "period": "Sep 2023\u2013Jan 2025",
-      "color": "#e8854a",
-      "desc": "Edited promotional and training videos aligned with branding and marketing strategies.",
-      "tags": [
-        "Premiere Pro",
-        "After Effects",
-        "Graphic Design",
-        "Social Media",
-        "Branding"
-      ]
-    }
-  ],
   "categories": [
     {
-      "name": "Programmatic Video",
-      "files": [
-        {
-          "id": "pv1",
-          "name": "Automated Intro Video",
-          "mediaUrl": "assets/portfolio_case_study_v3.mp4",
-          "mediaType": "video",
-          "description": "A fully programmatic introduction to my body of work. Built using HTML/CSS and rendered via HyperFrames. Voiceover, background music, and script were generated using local AI models (Llama 3, MusicLM) and orchestrated into a seamless automated pipeline.",
-          "technical": {
-            "resolution": "4K Master",
-            "fps": "60",
-            "bitrate": "50Mbps",
-            "codec": "H.264",
-            "duration": "00:30"
-          },
-          "tools": [
-            "HyperFrames",
-            "Remotion",
-            "React",
-            "Local AI (Llama/MusicLM)",
-            "Automated VO"
-          ],
-          "tags": [
-            "Programmatic",
-            "AI-Driven",
-            "Code-to-Video"
-          ]
-        },
-        {
-          "id": "pv2",
-          "name": "Feature Walkthrough",
-          "mediaUrl": "assets/portfolio_features_v1.mp4",
-          "mediaType": "video",
-          "description": "A programmatic feature walkthrough of the Visual Architect workspace. Features a Beethoven-inspired orchestral score and AI-generated voiceover, showcasing the site's interactive NLE timeline and programmatic pipeline through automated captures.",
-          "technical": {
-            "resolution": "4K Cinematic",
-            "fps": "30",
-            "bitrate": "45Mbps",
-            "codec": "H.264",
-            "duration": "00:25"
-          },
-          "tools": [
-            "HyperFrames",
-            "Remotion",
-            "Beethoven AI",
-            "Automated Capture"
-          ],
-          "tags": [
-            "Feature Demo",
-            "Orchestral",
-            "Automation"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Video Editor",
+      "name": "Code-to-video rendering",
       "files": [
         {
           "id": "ve1",
@@ -478,6 +385,41 @@
             "fps": "24",
             "dur": "0:30"
           }
+        }
+      ]
+    },
+    {
+      "name": "Professional Experience",
+      "files": [
+        {
+          "id": "exp1",
+          "name": "Visual Architect",
+          "role": "Video Editor",
+          "period": "Mar 2025\u2013Feb 2026",
+          "color": "#0ea5e9",
+          "desc": "Edited multicam footage and event content into high-quality videos for diverse audiences. Performed advanced green screen keying and compositing for professional outputs.",
+          "tags": [
+            "Multicam Editing",
+            "Green Screen",
+            "Compositing",
+            "AI Tools",
+            "Event Videography"
+          ]
+        },
+        {
+          "id": "exp2",
+          "name": "Gozzimma TT / Maho Jase IT",
+          "role": "Video Editor & Graphic Designer",
+          "period": "Sep 2023\u2013Jan 2025",
+          "color": "#e8854a",
+          "desc": "Edited promotional and training videos aligned with branding and marketing strategies.",
+          "tags": [
+            "Premiere Pro",
+            "After Effects",
+            "Graphic Design",
+            "Social Media",
+            "Branding"
+          ]
         }
       ]
     }
