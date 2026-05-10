@@ -400,7 +400,6 @@ function CinematicIntro({ onComplete }) {
     }, 8000);
 
     try {
-      tl.set(".intro-gate", { display: "flex", opacity: 1 });
       tl.set(".intro-name", { scale: 0.1, opacity: 0, perspective: 1000 });
 
       // Star Wars style "SURESH VIZHAL" coming forward
@@ -448,7 +447,7 @@ function CinematicIntro({ onComplete }) {
   return (
     <div className="intro-gate" style={{
       position: 'fixed', inset: 0, background: '#000', zIndex: 9999,
-      display: 'none', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
       color: '#fff', textAlign: 'center', pointerEvents: 'none', overflow: 'hidden'
     }}>
       <div className="intro-sv" style={{ fontFamily: 'var(--font-mono)', fontSize: '14px', letterSpacing: '12px', color: 'var(--acc)', marginBottom: '30px', fontWeight: 600 }}>SV — VISUAL ARCHITECT</div>
